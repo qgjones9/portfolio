@@ -11,3 +11,7 @@ When I'm not shipping code, you'll usually find me **leveling up in video games*
 ## This repo
 
 A React + TypeScript portfolio (Vite, Tailwind, JSON-driven project data). More to come as the gallery grows.
+
+## Documentation
+
+Architecture and decisions: [docs/index.md](docs/index.md). **Next steps (commands):** [docs/runbook.md](docs/runbook.md).
