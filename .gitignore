@@ -1,0 +1,78 @@
+# Dependencies
+node_modules/
+
+# Vite / production build
+dist/
+dist-ssr/
+*.local
+
+# Vite cache
+.vite/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# TypeScript
+*.tsbuildinfo
+
+# Test and coverage (Vitest / Playwright if added later)
+coverage/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Linters and formatters
+.eslintcache
+.prettiercache
+
+# Package manager caches
+.npm
+.pnpm-store/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Editor directories (keep shared settings if you add them later)
+.idea/
+*.swp
+*.swo
+*~
+
+# Optional: ignore personal VS Code settings; commit extensions.json if you use one
+.vscode/*
+!.vscode/extensions.json
+
+# Cursor IDE (local rules, plans, agent state)
+.cursor/
+
+# Local scratch notes (not part of the app)
+scracth.txt
+scratch.txt
+
+
+# agents
+docs/AGENTS.md
+docs/TODO.md
