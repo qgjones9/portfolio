@@ -1,19 +1,19 @@
-import './App.css'
-import projects from './data/projects.json'
-import type { Project } from './types/project'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
 
 export default function App() {
-  // Cast the projects to the Project type 
-  const projectList = projects as Project[];
-
-  for (const project of projectList) {
-    console.log(project);
-  }
-
   return (
-     <main className="min-h-screen bg-zinc-950 text-zinc-100 p-8">
-      <h1 className="text-2xl font-semibold">Portfolio</h1>
-      <p className="text-zinc-400 mt-2">Tailwind is working.</p>
-     </main>
-  );
+    <div id="top" className="flex min-h-screen flex-col bg-zinc-950 text-zinc-100">
+      <Navbar />
+      <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-12 sm:px-6 lg:px-8">
+        <section id="projects" className="mt-16 scroll-mt-20">
+          Project Gallery
+        </section>
+        <section id="contact" className="mt-16 scroll-mt-20">
+          Contact Form
+        </section>
+      </main>
+      <Footer />
+    </div>
+  )
 }
