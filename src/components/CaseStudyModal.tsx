@@ -1,6 +1,7 @@
-import { ExternalLink, Play, X } from 'lucide-react'
+import { X } from 'lucide-react'
 import { useEffect, useId, useRef } from 'react'
 import type { Project } from '../types/project'
+import VideoEmbed from './VideoEmbed'
 
 interface CaseStudyModalProps {
   project: Project | null
@@ -189,20 +190,10 @@ export default function CaseStudyModal({
               Video Walkthrough
             </h3>
             {showVideo ? (
-              <div className="mt-3 rounded-lg border border-zinc-800/90 bg-zinc-950/50 p-4">
-                <div className="flex aspect-video items-center justify-center rounded-md border border-dashed border-zinc-700/70 bg-zinc-900/60">
-                  <a
-                    href={caseStudy.videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg border border-violet-500/35 bg-violet-500/10 px-4 py-2.5 text-sm font-semibold text-zinc-50 transition-colors hover:border-violet-400/55 hover:bg-violet-500/20"
-                  >
-                    <Play className="h-4 w-4 shrink-0" aria-hidden />
-                    Open video walkthrough
-                    <ExternalLink className="h-3.5 w-3.5 shrink-0 opacity-70" aria-hidden />
-                  </a>
-                </div>
-              </div>
+              <VideoEmbed
+                url={caseStudy.videoUrl!}
+                title={`${project.title} walkthrough`}
+              />
             ) : (
               <p className="mt-2 text-sm text-zinc-600 italic">
                 Video walkthrough coming soon

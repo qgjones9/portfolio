@@ -2,7 +2,7 @@
 
 Step-by-step commands from an empty app tree through local dev, production build, and (later) AWS hosting. Run from the repository root unless noted.
 
-**Related docs:** [index](index.md) · [frontend stack](architecture/frontend-stack.md) · [AWS hosting](architecture/hosting-aws.md) · [contact/leads](architecture/contact-and-leads.md)
+**Related docs:** [index](index.md) · [frontend stack](architecture/frontend-stack.md) · [AWS hosting](architecture/hosting-aws.md) · [contact/leads](architecture/contact-and-leads.md) · [YouTube demo uploads](youtube-upload.md)
 
 ---
 
@@ -346,6 +346,7 @@ Check DynamoDB item and inbox. Test from the live site with browser devtools Net
 | Typecheck + build gate | `npm run build` |
 | Deploy assets | `aws s3 sync dist/ s3://$BUCKET/ --delete` |
 | Cache bust | `aws cloudfront create-invalidation …` |
+| YouTube demo (convert + upload) | See [youtube-upload.md](youtube-upload.md) |
 
 ---
 

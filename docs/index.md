@@ -23,4 +23,5 @@ Architecture, operations, and design decisions for the Software Gallery portfoli
 | Document | Summary |
 |----------|---------|
 | [Runbook](runbook.md) | Copy-paste commands to scaffold, build, deploy, and wire contact API |
+| [YouTube demo uploads](youtube-upload.md) | Convert screencasts to MP4 and publish unlisted demos for project cards |
 

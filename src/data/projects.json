@@ -6,7 +6,7 @@
       "description": "B2B dashboard and APIs giving operators a single view of orders, warehouses, and carrier events.",
       "category": "B2B SaaS",
       "stack": ["React", "TypeScript", "FastAPI", "PostgreSQL"],
-      "thumbnail": "/images/3pl-thumb.png",
+      "thumbnail": "/images/3pl-thumb.webp",
       "githubUrl": "https://github.com/your-org/3pl-visibility",
       "caseStudy": {
         "summary": "Unified visibility layer across WMS, TMS, and carrier webhooks.",
@@ -16,7 +16,7 @@
           { "label": "Active tenants", "value": "12", "description": "Pilot and production 3PLs" },
           { "label": "Events ingested / day", "value": "~2M", "description": "Webhook + batch pipeline" }
         ],
-        "videoUrl": ""
+        "videoUrl": "https://youtu.be/3ZVhvbLyAeY"
       }
     },
     {
@@ -26,7 +26,7 @@
       "description": "PySide6 application replacing spreadsheet-driven lease workflows with validated migrations into a modern billing schema.",
       "category": "Desktop & Migrations",
       "stack": ["Python", "PySide6", "SQLAlchemy"],
-      "thumbnail": "/images/legacy-lease-thumb.png",
+      "thumbnail": "/images/legacy-lease-thumb.webp",
       "githubUrl": "",
       "caseStudy": {
         "summary": "Guided migration wizard with dry-run validation before cutover.",
@@ -36,7 +36,7 @@
           { "label": "Leases migrated", "value": "8.4k", "description": "Single-tenant pilot" },
           { "label": "Validation rules", "value": "140+", "description": "Pre-cutover checks" }
         ],
-        "videoUrl": ""
+        "videoUrl": "https://youtu.be/3ZVhvbLyAeY"
       }
     }
 ]
