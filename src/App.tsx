@@ -3,6 +3,7 @@ import FilterTabs, { type ProjectCategoryFilter } from './components/FilterTabs'
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
 import Navbar from './components/Navbar'
+import ProjectGrid from './components/ProjectGrid'
 import projectsData from './data/projects.json'
 import type { Project } from './types/project'
 
@@ -46,11 +47,10 @@ export default function App() {
             {projects.length === 1 ? '' : 's'}
           </p>
 
-          <ul className="mt-4 space-y-2 text-sm text-zinc-300">
-            {filteredProjects.map((project) => (
-              <li key={project.id}>{project.title}</li>
-            ))}
-          </ul>
+          <ProjectGrid
+            projects={filteredProjects}
+            activeCategoryLabel={activeCategory}
+          />
         </section>
         <section id="contact" className="mt-16 scroll-mt-20">
           Contact Form
