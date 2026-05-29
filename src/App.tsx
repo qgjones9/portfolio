@@ -1,4 +1,5 @@
 import { useMemo, useState } from 'react'
+import CaseStudyModal from './components/CaseStudyModal'
 import FilterTabs, { type ProjectCategoryFilter } from './components/FilterTabs'
 import Footer from './components/Footer'
 import HeroSection from './components/HeroSection'
@@ -12,6 +13,7 @@ const projects = projectsData as Project[]
 export default function App() {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategoryFilter>('All')
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
 
   const filteredProjects = useMemo(() => {
     if (activeCategory === 'All') {
@@ -50,6 +52,7 @@ export default function App() {
           <ProjectGrid
             projects={filteredProjects}
             activeCategoryLabel={activeCategory}
+            onViewCaseStudy={setSelectedProject}
           />
         </section>
         <section id="contact" className="mt-16 scroll-mt-20">
@@ -57,6 +60,11 @@ export default function App() {
         </section>
       </main>
       <Footer />
+      <CaseStudyModal
+        project={selectedProject}
+        open={selectedProject !== null}
+        onClose={() => setSelectedProject(null)}
+      />
     </div>
   )
 }

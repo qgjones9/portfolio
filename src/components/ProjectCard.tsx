@@ -5,6 +5,7 @@ const DESCRIPTION_EXCERPT_LENGTH = 140
 
 interface ProjectCardProps {
   project: Project
+  onViewCaseStudy?: (project: Project) => void
 }
 
 function cardSummary(project: Project): string {
@@ -29,13 +30,13 @@ function hasGithubUrl(githubUrl: string): boolean {
   return githubUrl.trim().length > 0
 }
 
-export default function ProjectCard({ project }: ProjectCardProps) {
+export default function ProjectCard({ project, onViewCaseStudy }: ProjectCardProps) {
   const summary = cardSummary(project)
   const showThumbnail = hasThumbnail(project.thumbnail)
   const showGithub = hasGithubUrl(project.githubUrl)
 
   const handleCaseStudyClick = () => {
-    console.log('View case study:', project.id)
+    onViewCaseStudy?.(project)
   }
 
   return (

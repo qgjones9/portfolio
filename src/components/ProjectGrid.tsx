@@ -5,11 +5,13 @@ import ProjectCard from './ProjectCard'
 interface ProjectGridProps {
   projects: Project[]
   activeCategoryLabel: string
+  onViewCaseStudy?: (project: Project) => void
 }
 
 export default function ProjectGrid({
   projects,
   activeCategoryLabel,
+  onViewCaseStudy,
 }: ProjectGridProps) {
   if (projects.length === 0) {
     return (
@@ -37,7 +39,7 @@ export default function ProjectGrid({
     <ul className="mt-8 grid list-none grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
       {projects.map((project) => (
         <li key={project.id} className="min-h-0">
-          <ProjectCard project={project} />
+          <ProjectCard project={project} onViewCaseStudy={onViewCaseStudy} />
         </li>
       ))}
     </ul>
